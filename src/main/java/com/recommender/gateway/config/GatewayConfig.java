@@ -13,6 +13,9 @@ public class GatewayConfig {
                 .route("recommender", r-> r
                         .path("/api/get/item/**")
                         .uri("lb://recommender-service"))
+                .route("recommender", r-> r
+                        .path("/api/get/user/**")
+                        .uri("lb://recommender-service"))
                 .build();
     }
 }
